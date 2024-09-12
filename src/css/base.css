@@ -22,6 +22,7 @@ body {
   min-width: 100vw;
   min-height: 100vh;
   margin: 0;
+  padding: 15px;
 }
 
 main {
@@ -29,4 +30,17 @@ main {
 }
 main:has(.back-link) {
   text-align: center;
+}
+
+.link-back-menu{
+  display: block;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  transition: 200ms ease-in;
+  margin-right: auto;
+}
+
+.link-back-menu:hover,
+.link-back-menu:focus {
+  color: #747bff;
 }
