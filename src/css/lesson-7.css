@@ -1,0 +1,19 @@
+.gallery{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.galleryItem{
+  width: 500px;
+  height: 500px;
+  
+}
+
+
+#name-input{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width: 500px;
+  height: 24px;
+}
