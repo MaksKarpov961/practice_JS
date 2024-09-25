@@ -13,7 +13,8 @@
 .nav-list {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  flex-wrap: wrap;
+  justify-content: flex-start;
   gap: 40px;
 }
 .nav-link {
