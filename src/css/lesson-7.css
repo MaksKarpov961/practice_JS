@@ -36,7 +36,7 @@
   margin-bottom: 8px;
 }
 
-.login-form button {
+button {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
@@ -47,14 +47,15 @@
   padding: 8px 16px;
   border: none;
   max-width: 150px;
+  margin-top: 10px;
 }
 
-.login-form button:hover{
+button:hover{
   background: #6c8cff;
 }
 
 
-.login-form label input {
+input {
   border: 1px solid #808080;
   border-radius: 4px;
   max-width: 360px;
@@ -68,3 +69,4 @@
     color: #2e2f42;
     outline: none;
 }
+

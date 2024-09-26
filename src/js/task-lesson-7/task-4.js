@@ -1,26 +1,25 @@
+const loginForm = document.querySelector('.login-form');
 
-const loginForm  = document.querySelector('.login-form')
+loginForm.addEventListener('submit', handleFormSubmit);
 
-loginForm .addEventListener('submit', eventLisenerSubmit)
+function handleFormSubmit(event) {
+  event.preventDefault(); // Зупиняємо відправку форми
 
-function eventLisenerSubmit(event) {
-  event.preventDefault();// Зупиняємо відправку форми
-  
-  const email = loginForm.elements.email.value.trim()
-  const password = loginForm.elements.password.value.trim()
+  const form = event.target; // Отримуємо форму, яка викликала подію
+  const email = form.elements.email.value.trim();
+  const password = form.elements.password.value.trim();
 
-  if (email === '' || password === '') {
-    alert('All form fields must be filled in')
-    return
+  if (validateForm(email, password)) {
+    return alert('All form fields must be filled in');
   }
   
-  const userLoginData = { email: email, password:password,}
+  const userLoginData = { email, password };
   
   console.log(userLoginData);
   
-  loginForm.reset();
+  form.reset(); // Скидаємо форму
+}
 
-  // loginForm.elements.email.value = '' ;
-  // loginForm.elements.password.value = '' ;
-
+function validateForm(email, password) {
+  return email === '' || password === ''; // Перевіряємо, чи заповнені поля
 }
