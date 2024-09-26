@@ -17,3 +17,54 @@
   width: 500px;
   height: 24px;
 }
+
+.login-form{
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.login-form label{
+  display: flex;
+  flex-direction: column;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+  margin-bottom: 8px;
+}
+
+.login-form button {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #fff;
+  background: #4e75ff;
+  border-radius: 8px;
+  padding: 8px 16px;
+  border: none;
+  max-width: 150px;
+}
+
+.login-form button:hover{
+  background: #6c8cff;
+}
+
+
+.login-form label input {
+  border: 1px solid #808080;
+  border-radius: 4px;
+  max-width: 360px;
+  height: 40px;
+  margin-top: 8px;
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    color: #2e2f42;
+    outline: none;
+}
