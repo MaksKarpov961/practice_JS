@@ -1,50 +1,52 @@
 function getRandomHexColor() {
   return `#${Math.floor(Math.random() * 16777215)
     .toString(16)
-    .padStart(6, '0')}`; // Використовуємо '0' як рядок
+    .padStart(6, 0)}`;
 }
 
-// Константи для елементів
+
 const inputEl = document.querySelector('[type="number"]'); // Інпут для вводу числа
 const createButton = document.querySelector('[data-create]'); // Кнопка для створення
 const destroyButton = document.querySelector('[data-destroy]'); // Кнопка для знищення
 const boxesContainer = document.querySelector('#boxes'); // Контейнер для блоків
 
-// Змінна для зберігання значення інпуту
+
+inputEl.addEventListener('input', handleUserInput)
+
+createButton.addEventListener('click', handleButtonCreate)
+
+
 let inputValue = 0;
 
-// Додаємо обробник подій для інпуту
-inputEl.addEventListener('input', handleListenerInputEl);
-
-function handleListenerInputEl(event) {
-  inputValue = Number(event.target.value.trim()); // Зберігаємо значення з інпуту як число
+function handleUserInput(event) {
+  inputValue = Number(event.target.value);
+  
 }
 
-// Додаємо обробник подій для кнопки створення
-createButton.addEventListener('click', handleClickCreateBtn);
 
-function handleClickCreateBtn(event) {
-  console.log(inputValue); // Виводимо значення інпуту
-  createBoxes(inputValue); // Викликаємо функцію для створення блоків (якщо така є)
-}
-
-// Приклад функції для створення блоків
-function createBoxes(amount) {
-  const boxes = [];
-  for (let i = 0; i < amount; i++) {
-    const box = document.createElement('div');
-    box.style.width = `${30 + i * 10}px`;
-    box.style.height = `${30 + i * 10}px`;
-    box.style.backgroundColor = getRandomHexColor();
-    boxes.push(box);
+function handleButtonCreate(event) {
+  
+  const fragment = document.createDocumentFragment();
+  if (inputValue > 100) {
+    return alert('забагато')
   }
-  boxesContainer.append(...boxes); // Додаємо всі блоки в контейнер
-}
 
+  let width = 30
+  let height = 30
+  
+  for (let index = 0; index < inputValue; index++) {
 
-destroyButton.addEventListener('click', handleClickdestroyBtn)
+    const newDiv = document.createElement('div')
+    newDiv.style.backgroundColor = getRandomHexColor();
+    newDiv.style.width = `${width}px`; // Збільшуємо ширину для кращої видимості
+    newDiv.style.height = `${height}px`;
+    newDiv.style.margin = '5px';
+    
+    width += 10
+    height += 10
 
-function handleClickdestroyBtn(event) {
-  boxesContainer.innerHTML = '';
-  inputEl.value = '';
+    fragment.appendChild(newDiv)
+  }
+  boxesContainer.appendChild(fragment)
+
 }
