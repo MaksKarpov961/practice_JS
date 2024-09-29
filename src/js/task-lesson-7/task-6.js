@@ -15,6 +15,7 @@ inputEl.addEventListener('input', handleUserInput)
 
 createButton.addEventListener('click', handleButtonCreate)
 
+destroyButton.addEventListener('click', handleButtonDestroy)
 
 let inputValue = 0;
 
@@ -34,6 +35,8 @@ function handleButtonCreate(event) {
   let width = 30
   let height = 30
   
+  boxesContainer.innerHTML = ''
+
   for (let index = 0; index < inputValue; index++) {
 
     const newDiv = document.createElement('div')
@@ -48,5 +51,11 @@ function handleButtonCreate(event) {
     fragment.appendChild(newDiv)
   }
   boxesContainer.appendChild(fragment)
+  inputEl.value = ''
 
+}
+
+
+function handleButtonDestroy(event) {
+  boxesContainer.innerHTML = ''
 }
