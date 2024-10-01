@@ -22,7 +22,7 @@ function populateForm() {
 // Функція для обробки введення даних у форму
 function handleFormInput({ target  }) {
   // Оновлюємо значення в об'єкті formData для відповідного поля
-  formData[target .name] = target .value.trim();
+  formData[target.name] = target.value.trim();
   
   // Зберігаємо оновлені дані у localStorage
   localStorage.setItem('feedback-form-state', JSON.stringify(formData));
@@ -30,16 +30,17 @@ function handleFormInput({ target  }) {
 
 // Функція для обробки відправки форми
 function handleFormSubmit(event) {
-  // Зупиняємо стандартну поведінку форми (оновлення сторінки)
   event.preventDefault();
-  
-  // Виводимо дані форми у консоль
+
+  const { email, message } = event.target.elements; // Отримуємо елементи
+
+  // Перевіряємо заповненість полів
+  if (email.value.trim() === '' || message.value.trim() === '') {
+    return alert("Please fill in all fields.");
+  }
+
   console.log(formData);
-
-  // Видаляємо збережені дані з localStorage після відправки форми
   localStorage.removeItem('feedback-form-state');
-
-  // Очищуємо всі поля форми за допомогою reset(), замість очищення кожного поля окремо
   feedBackForm.reset();
 }
 
