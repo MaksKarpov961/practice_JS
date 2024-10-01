@@ -4,13 +4,25 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gallery</title>
+    <title>Form</title>
     <link rel="stylesheet" href="../css/lesson-9.css" />
     <link rel="stylesheet" href="../css/styles.css" />
   </head>
   <body>
     <p><a class="link-back-menu" href="../lesson-9.html">Go back</a></p>
-
+    <div class="container">
+      <form class="feedback-form" autocomplete="off">
+        <label>
+          Email
+          <input type="email" name="email" autofocus />
+        </label>
+        <label>
+          Message
+          <textarea name="message" rows="8"></textarea>
+        </label>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
     <script src="../js/task-lesson-9/2-form.js" type="module"></script>
   </body>
 </html>

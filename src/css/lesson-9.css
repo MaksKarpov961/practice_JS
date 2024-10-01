@@ -1,0 +1,81 @@
+:root {
+  --iris: #4e75ff;
+  --ocean: #6c8cff;
+  --navy-blue: #2e2f42;
+  --green: #31d0aa;
+  --slate: #434455;
+  --light-slate: #8e8f99;
+  --cornflower: #e7e9fc;
+  --cloud: #f4f4fd;
+  --navy-blue-modal: rgba(46, 47, 66, 0.4);
+  --grey: rgba(46, 47, 66, 0.7);
+  --white: #fff;
+  --dairy: #fcfcfc;
+  --font-family: "Montserrat", sans-serif;
+}
+
+.feedback-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 360px;
+  margin: 0 auto;
+
+}
+
+.feedback-form label {
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+
+}
+
+.feedback-form input,
+.feedback-form textarea {
+  width: 100%;
+  outline: none;
+  padding: 8px;
+  margin-top: 8px;
+  margin-bottom: 8px;
+
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+
+  border: 1px solid #808080;
+  border-radius: 4px;
+
+}
+
+.feedback-form textarea {
+  height: 80px;
+  resize: none;
+}
+
+.feedback-form button {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  color: var(--white);
+
+  border-radius: 8px;
+  padding: 8px 16px;
+  background-color: var(--iris);
+  border: none;
+  cursor: pointer;
+  align-self: flex-start;
+
+  transition: background-color linear 250ms;
+}
+
+.feedback-form button:hover {
+  background-color: var(--ocean);
+}
