@@ -1,9 +1,7 @@
 import flatpickr from "flatpickr";
 import "flatpickr/dist/flatpickr.min.css";
-// Описаний у документації
-import iziToast from "izitoast";
-// Додатковий імпорт стилів
-import "izitoast/dist/css/iziToast.min.css";
+import iziToast from "izitoast"; // Описаний у документації
+import "izitoast/dist/css/iziToast.min.css"; // Додатковий імпорт стилів
 
 const buttonStart = document.querySelector('[data-start]');
 const buttonStop = document.querySelector('[data-stop]');
@@ -34,14 +32,12 @@ function disableButtonStart() {
 }
 disableButtonStart();
 
-
+// Вимикаємо кнопку стоп за замовчуванням
 disableButtonStop(); 
-
 
 function disableButtonStop() { 
   buttonStop.disabled = true; 
 }
-
 
 function enableButtonStop() { 
   buttonStop.disabled = false; 
@@ -50,7 +46,6 @@ function enableButtonStop() {
 function enableButtonStart() {
   buttonStart.disabled = false;
 }
-
 
 function disableDatetimeInput() { 
   datetimeInput.disabled = true;
@@ -83,17 +78,18 @@ function handleSelectedDate(date) {
   
   if (userSelectedDate < currentDate) {
     disableButtonStart();
-  iziToast.show({
-    title: 'Error', // Заголовок повідомлення
-    message: 'Please choose a date in the future', // Текст повідомлення
-    color: 'red', // Колір заголовка
-    backgroundColor: '#ffcccc', // Фон повідомлення
-    position: 'topRight', // Позиція повідомлення на екрані
-    timeout: 5000, // Час показу повідомлення (в мілісекундах)
-    close: true, // Дозволити закриття повідомлення
-    pauseOnHover: true, // Призупинити таймер при наведенні курсора
-    progressBar: true, // Відображати індикатор прогресу
-});
+    // Відображаємо повідомлення про помилку
+    iziToast.show({
+      title: 'Error', // Заголовок повідомлення
+      message: 'Please choose a date in the future', // Текст повідомлення
+      color: 'red', // Колір заголовка
+      backgroundColor: '#ffcccc', // Фон повідомлення
+      position: 'topRight', // Позиція повідомлення на екрані
+      timeout: 5000, // Час показу повідомлення (в мілісекундах)
+      close: true, // Дозволити закриття повідомлення
+      pauseOnHover: true, // Призупинити таймер при наведенні курсора
+      progressBar: true, // Відображати індикатор прогресу
+    });
   } else {
     enableButtonStart();
   }
@@ -135,18 +131,18 @@ function handleClickBtnStartTimer(event) {
       dataMinutes.textContent = '00';
       dataSeconds.textContent = '00';
       disableButtonStop(); 
-        iziToast.show({
-          title: 'Success', // Заголовок повідомлення
-          message: 'Time is up!', // Текст повідомлення
-          color: 'green', // Колір заголовка
-          backgroundColor: '#ccffcc', // Фон повідомлення
-          position: 'topRight', // Позиція повідомлення на екрані
-          timeout: 5000, // Час показу повідомлення (в мілісекундах)
-          close: true, // Дозволити закриття повідомлення
-          pauseOnHover: true, // Призупинити таймер при наведенні курсора
-          progressBar: true, // Відображати індикатор прогресу
-});
-
+      // Відображаємо повідомлення про успіх
+      iziToast.show({
+        title: 'Success', // Заголовок повідомлення
+        message: 'Time is up!', // Текст повідомлення
+        color: 'green', // Колір заголовка
+        backgroundColor: '#ccffcc', // Фон повідомлення
+        position: 'topRight', // Позиція повідомлення на екрані
+        timeout: 5000, // Час показу повідомлення (в мілісекундах)
+        close: true, // Дозволити закриття повідомлення
+        pauseOnHover: true, // Призупинити таймер при наведенні курсора
+        progressBar: true, // Відображати індикатор прогресу
+      });
     }
   }, 1000);
 
@@ -167,4 +163,15 @@ function handleClickBtnStop(event) {
   dataHours.textContent = '00';
   dataMinutes.textContent = '00';
   dataSeconds.textContent = '00';
+  iziToast.show({
+        title: 'Info', // Заголовок повідомлення
+        message: 'Timer stop!', // Текст повідомлення
+        color: 'green', // Колір заголовка
+        backgroundColor: '#ccffcc', // Фон повідомлення
+        position: 'topRight', // Позиція повідомлення на екрані
+        timeout: 5000, // Час показу повідомлення (в мілісекундах)
+        close: true, // Дозволити закриття повідомлення
+        pauseOnHover: true, // Призупинити таймер при наведенні курсора
+        progressBar: true, // Відображати індикатор прогресу
+      });
 }
