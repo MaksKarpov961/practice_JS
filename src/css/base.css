@@ -1,4 +1,20 @@
-
+:root {
+  --iris: #4e75ff;
+  --ocean: #6c8cff;
+  --navy-blue: #2e2f42;
+  --green: #31d0aa;
+  --slate: #434455;
+  --light-slate: #8e8f99;
+  --cornflower: #e7e9fc;
+  --cloud: #f4f4fd;
+  --navy-blue-modal: rgba(46, 47, 66, 0.4);
+  --grey: rgba(46, 47, 66, 0.7);
+  --white: #fff;
+  --dairy: #fcfcfc;
+  --font-family: "Montserrat", sans-serif;
+  --red:#e01e04;
+  --dark-red:#811001;
+}
 
 
 :root {
