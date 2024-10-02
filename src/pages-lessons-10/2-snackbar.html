@@ -5,12 +5,44 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sackbar</title>
-    <link rel="stylesheet" href="../css/lessons-10.css" />
     <link rel="stylesheet" href="../css/styles.css" />
   </head>
   <body>
     <p><a class="link-back-menu" href="../lesson-10.html">Go back</a></p>
+    <div class="container">
+      <form class="form">
+        <label>
+          Delay (ms)
+          <input type="number" name="delay" required />
+        </label>
 
+        <fieldset>
+          <legend>State</legend>
+          <label class="label-snakbar">
+            <input
+              class="input-snakbar"
+              type="radio"
+              name="state"
+              value="fulfilled"
+              required
+            />
+            Fulfilled
+          </label>
+          <label class="label-snakbar">
+            <input
+              class="input-snakbar"
+              type="radio"
+              name="state"
+              value="rejected"
+              required
+            />
+            Rejected
+          </label>
+        </fieldset>
+
+        <button type="submit">Create notification</button>
+      </form>
+    </div>
     <script src="../js/lessons-10/2-snackbar.js" type="module"></script>
   </body>
 </html>
