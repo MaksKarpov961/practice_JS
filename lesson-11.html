@@ -9,27 +9,30 @@
     <link rel="modulepreload" crossorigin href="/practice_JS/assets/modulepreload-polyfill-B5Qt9EMX.js">
     <link rel="modulepreload" crossorigin href="/practice_JS/assets/vendor-DbVqBAlR.js">
     <link rel="stylesheet" crossorigin href="/practice_JS/assets/vendor-DkczhqSJ.css">
-    <link rel="stylesheet" crossorigin href="/practice_JS/assets/styles-C6AMFQ0K.css">
+    <link rel="stylesheet" crossorigin href="/practice_JS/assets/styles-CsvhwnTA.css">
   </head>
   <body>
     <main>
       <a class="link-back-menu" href="./index.html">Back to menu</a>
       <section>
         <div class="container">
-          <form class="search-form">
-            <input
-              type="search"
-              name="search"
-              id="nameImg"
-              placeholder="Search images..."
-              autofocus
-            />
-            <button class="js-start-search start-search" type="submit">
-              Search
-            </button>
-          </form>
+          <div class="wrapper-gallery">
+            <form class="search-form">
+              <input
+                type="search"
+                name="search"
+                id="nameImg"
+                placeholder="Search images..."
+                autofocus
+              />
+              <button class="js-start-search start-search" type="submit">
+                Search
+              </button>
+            </form>
 
-          <ul class="gallery"></ul>
+            <ul class="gallery"></ul>
+            <p class="loader visually-hidden"></p>
+          </div>
         </div>
       </section>
     </main>
