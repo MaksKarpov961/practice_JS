@@ -2,11 +2,13 @@
 
 
 
-
+.wrapper-gallery{
+  display: flex;
+  flex-direction: column;
+}
 
 
 .search-form {
-  width: 600px;
   margin: 0 auto;
   margin-bottom: 25px;
 }
