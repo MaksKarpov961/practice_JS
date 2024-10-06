@@ -18,6 +18,7 @@
   border-radius: 4px;
   width: 272px;
   height: 40px;
+  padding-left: 15px;
 }
 
 #nameImg:hover{
@@ -49,9 +50,6 @@
 
 }
 
-.gallery-link {
-
-}
 
 .gallery-image {
   width: 360px;
