@@ -4,8 +4,11 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/practice_JS/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Lesson-11</title>
+    <title>Lesson-12</title>
     <script type="module" crossorigin src="/practice_JS/assets/modulepreload-polyfill-B5Qt9EMX.js"></script>
+    <script type="module" crossorigin src="/practice_JS/assets/vendor-a2BocS2h.js"></script>
+    <script type="module" crossorigin src="/practice_JS/assets/lesson-12-main-D2izVF_Y.js"></script>
+    <link rel="stylesheet" crossorigin href="/practice_JS/assets/vendor-CWKLx11g.css">
     <link rel="stylesheet" crossorigin href="/practice_JS/assets/styles-gA0AWEIt.css">
   </head>
   <body>
@@ -13,20 +16,23 @@
       <a class="link-back-menu" href="./index.html">Back to menu</a>
       <section>
         <div class="container">
-          <form class="search-form">
-            <input
-              type="search"
-              name="search"
-              id="nameImg"
-              placeholder="Search images..."
-              autofocus
-            />
-            <button class="js-start-search" type="submit">Search</button>
-          </form>
+          <div class="wrapper-gallery">
+            <form class="search-form">
+              <input
+                type="search"
+                name="search"
+                id="nameImg"
+                placeholder="Search images..."
+                autofocus
+              />
+              <button class="js-start-search start-search" type="submit">
+                Search
+              </button>
+            </form>
 
-          <ul class="gallery"></ul>
-
-          <button type="button" class="load-more-button">Load More</button>
+            <ul class="gallery"></ul>
+            <p class="loader visually-hidden"></p>
+          </div>
         </div>
       </section>
     </main>
