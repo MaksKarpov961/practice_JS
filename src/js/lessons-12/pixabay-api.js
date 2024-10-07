@@ -17,7 +17,7 @@ export async function getPhotos(query, page) {
         page,
       }
     })
-    return responce.data.hits
+    return responce.data
   } catch (error) {
     console.log('Помилка при завантаженні фото:', error)
   }

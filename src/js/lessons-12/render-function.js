@@ -1,5 +1,5 @@
 export function createMarkupGallery(data) {
-  const markupGallery = data.map(item => {
+  const markupGallery = data.hits.map(item => {
     const { webformatURL, largeImageURL, tags, likes, views, comments, downloads } = item;
     return `
             <li class="gallery-item">
